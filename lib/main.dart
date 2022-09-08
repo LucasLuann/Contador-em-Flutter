@@ -40,6 +40,7 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
                 fontSize: 30, color: Colors.white, fontWeight: FontWeight.w700),
           ),
+          const SizedBox(height: 32),
           const Text(
             '0',
             style: TextStyle(
@@ -47,18 +48,38 @@ class HomePage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          const SizedBox(height: 32),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: decrement,
-                child: Text('Saiu',
-                    style: TextStyle(color: Colors.black, fontSize: 16)),
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    )),
+                child: const Text(
+                  'Saiu',
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
               ),
+              const SizedBox(width: 32),
               TextButton(
                 onPressed: increment,
-                child: Text('Entrou',
-                    style: TextStyle(color: Colors.black, fontSize: 16)),
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    )),
+                child: const Text(
+                  'Entrou',
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
               ),
             ],
           )
